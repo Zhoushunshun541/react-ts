@@ -1,12 +1,12 @@
-const proxy = require('http-proxy-middleware');
+const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = function (app) {
-  app.use(proxy('/public', {
-    target:process.env.api,
-    secure: false,
-    changeOrigin: true,
-    pathRewrite: {
-      "^/public": "/"
-    }
-  }))
+  // app.use(createProxyMiddleware('/', {
+  //   target:'http://localhost:3000',
+  //   secure: false,
+  //   changeOrigin: true,
+  //   pathRewrite: {
+  //     "^/": "/"
+  //   }
+  // }))
 }
