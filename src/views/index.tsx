@@ -1,5 +1,6 @@
 import React from 'react';
 import './index.less'
+import { Button } from 'antd';
 export default class Index extends React.Component<any, any>{
   constructor(props: object){
     super(props)
@@ -7,8 +8,15 @@ export default class Index extends React.Component<any, any>{
       num: 1
     }
   }
-
   render(){
-    return <div className="index">{this.state.num}</div>
+    const addNum = ()=> {
+      this.setState({
+        num:  1000
+      })
+    }
+    return <div className="index" onClick={addNum} >
+      {this.state.num}
+      <Button type="primary" shape="circle" >查看按钮</Button>
+    </div>
   }
 }

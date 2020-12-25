@@ -10,7 +10,6 @@ const overConfig  = override(
   }),
   addLessLoader({
     javascriptEnabled: true,
-    modifyVars: { '@primary-color': '#009688' },
   }),
 );
 

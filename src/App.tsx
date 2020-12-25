@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.less';
 import routes from './router/router';
 import { RouteWithSubRoutes } from './router/common';
 import { RouteInterface } from './router/interface';
