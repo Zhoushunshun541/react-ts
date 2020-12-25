@@ -9,6 +9,7 @@ const RouteWithSubRoutes = (route: RouteInterface, index: number) => {
     <Route
       key={index}
       path={route.path}
+      exact={route.exact?true:false}
       render={(props: object)=> (
         <route.component {...props} routes={route.routes} />
       )}

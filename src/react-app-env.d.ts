@@ -3,6 +3,7 @@
 /// <reference types="react-dom" />
 declare module '@loadable/component'
 declare module 'react-router-dom'
+declare module 'qs'
 declare namespace NodeJS {
   interface ProcessEnv {
     readonly NODE_ENV: 'development' | 'production' | 'test';
