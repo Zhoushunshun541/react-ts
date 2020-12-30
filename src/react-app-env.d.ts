@@ -1,6 +1,12 @@
 /// <reference types="node" />
 /// <reference types="react" />
 /// <reference types="react-dom" />
+interface Api {
+  status?: number
+  code?: number
+  data?: any
+  msg?: string
+}
 declare module '@loadable/component'
 declare module 'react-router-dom'
 declare module 'qs'

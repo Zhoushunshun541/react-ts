@@ -1,9 +1,5 @@
 import axios from 'axios'
 import qs from 'qs'
-const allUrl = window.document.location.href;
-const pathName = window.document.location.pathname;
-const urlRoute = allUrl.indexOf(pathName);
-const baseUrl = allUrl.substring(0, urlRoute);
 const http = axios.create({
   // baseURL: process.env.NODE_ENV === 'production' ? process.env.VUE_APP_API + '' : '',
   baseURL: process.env.VUE_APP_API,
@@ -19,24 +15,31 @@ const http = axios.create({
 // 返回的时候拦截一下
 http.interceptors.response.use(
   res => {
-    if (+res.data.code === 200) {
-      res.data.status = 1
-    } else {
+    console.log(res);
+    
+    // 正常返回
+    // 220  也属于成功请求  但是数据为空  所以单独拉出来判断下
+    if (JSON.parse(res.request.response).status === 220) {
       res.data.status = 0
-    }
-    if ([403,404].includes(res.data.code)) {
-      // window.location.href = baseUrl
+    } else {
+      if (res.data.status === 200) {
+        res.data.status = 1
+      } else {
+        res.data.status = 0
+      }
     }
     return res.data
   },
   error => {
     // 异常返回 根据相应的状态码进行对应操作
-
+    if (error.response && [403,404].includes(error.response.status)) {
+      window.location.href = '/'
+    }else{
+      return error.response.data
+    }
   }
 )
 
 export const sysLogin = (params: object) => {
-  console.log(params);
-  
   return http.post('/api/sys/login', qs.stringify(params))
 }

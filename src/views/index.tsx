@@ -1,12 +1,12 @@
 
 import { withRouter } from "react-router"
 import './index.less'
-import { Form, Input, Button } from 'antd';
+import { Form, Input, Button,message } from 'antd';
 import { sysLogin } from '../api/api'
 
 function Index(props){
   const FormOptions = {
-
+    validateTrigger:'onBlur'
   }
   const user = {
     username:'',
@@ -17,9 +17,11 @@ function Index(props){
     let p = {
       ...user
     }
-    sysLogin(p).then(res => {
+    sysLogin(p).then((res: Api) => {
       if (res.status) {
         props.history.push('/home')
+      }else{
+        message.error(res.msg)
       }
     })
   }
@@ -30,6 +32,7 @@ function Index(props){
   <Form {...FormOptions}>
     <Form.Item
       label="用户名"
+      name="username"
       rules={[{ required: true, message: '请输入用户名' }]}
     >
       <Input placeholder="请输入用户名" onChange={e => changeData(e,'username')} />
