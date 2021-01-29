@@ -4,7 +4,7 @@ const routes = [
     path: '/',
     name:'',
     exact:true,
-    component: Loadable(() => import('../views/index'))
+    component: Loadable(() => import('../views/login'))
   },
   {
     path: '/home',

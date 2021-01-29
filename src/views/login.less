@@ -1,0 +1,155 @@
+.zss-login{
+  height: 100%;
+  background: #343d3b;
+  justify-content: center;
+  &-bg{
+    position: relative;
+    background: #1c1e21;
+    border-radius: 4px;
+    padding-left: 20px;
+    i{
+      color: #343d3b;
+      line-height: 50px;
+    }
+  }
+  .ant-form-item{
+    margin-bottom: 0;
+    width: 330px;
+    background-color: #1c1e21;
+  }
+  &-divider{
+    background: #343d3b;
+    height: 3px;
+    width: 100%;
+  }
+  .ant-form-item-explain-error{
+    position: absolute;
+    line-height: 1;
+    padding-top: 6px;
+    color: #ed4014;
+    top: 30px;
+    left: 10px;
+  }
+  .ant-form-item-control-input-content{
+    display: inline-block;
+    width: 100%;
+    background-color: #343d3b;
+    position: relative;
+    vertical-align: middle;
+    line-height: normal;
+  }
+  .ant-input{
+    display: block;
+    width: 280px;
+    border-radius: 0 4px 4px 0;
+    height: 50px;
+    opacity: 0.9;
+    border: 0;
+    font-size: 14px;
+    font-weight: 500;
+    outline: none;
+    padding-left: 10px;
+    color: #B8D9D2;
+    background: #1c1e21;
+    &:focus{
+      box-shadow: none;
+      border: none;
+    }
+    &:hover{
+      background: #1c1e21;
+    }
+    &::-webkit-input-placeholder{
+      color:#4F5562;
+    }
+    &::-moz-placeholder{   /* Mozilla Firefox 19+ */
+      color:#4F5562;
+    }
+    &:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+      color:#4F5562;
+    }
+    &:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+      color:#4F5562;
+    }
+  }
+  input:-internal-autofill-previewed,
+  input:-internal-autofill-selected {
+    background: #1c1e21 !important;
+    color: #b8d9d2 !important;
+    -webkit-text-fill-color: #b8d9d2 !important;
+    transition: background-color 5000s ease-in-out 0s !important;
+  }
+  input:-webkit-autofill { box-shadow: 0 0 0px 1000px transparent inset !important;}
+  .ant-input-affix-wrapper>.ant-input-suffix{
+    display: none;
+  }
+  .ant-input-password{
+    .ant-input-suffix{
+     display: none;
+     right: 30px;
+     margin: 0;
+     text-align: center;
+     width: 32px;
+     line-height: 50px;
+     span{
+       color: #4f5562!important;
+     }
+    }
+    &:hover .ant-input-suffix{
+      display: inline-block;
+      span{
+       color: #4F5562 !important;
+       font-weight: 500 !important;
+      }
+    }
+  }
+  .ant-input-password,.ant-input-affix-wrapper{
+    padding: 0;
+    border: none;
+    position: relative;
+    background-color: #1c1e21;
+    &:focus{
+      border: none;
+      box-shadow: none;
+    }
+    &:hover{
+      background: #1c1e21;
+    }
+  }
+  .ant-input-affix-wrapper-focused{
+    box-shadow: none;
+  }
+  .ant-form-item-control{
+    position: relative;
+    line-height: 32px;
+    font-size: 14px;
+  }
+  .ant-btn-icon-only{
+    width: 54px;
+    height: 54px;
+    border-radius: 50% 50% !important;
+    position: absolute;
+    right: -25px;
+    top: 26px;
+    color: #fff;
+    font-size: 16px;
+    background: #1c1e21;
+    border: 7px solid #343d3b;
+    z-index: 2;
+    .anticon-caret-right{
+      line-height: inherit;
+      color: #343d3b;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 5px;
+    }
+    &:hover{
+      border-color: none;
+      background-color: none;
+    }
+    &:focus{
+      box-shadow: 0 0 0 2px rgba(28,30,33,0.2);
+    }
+  }
+}

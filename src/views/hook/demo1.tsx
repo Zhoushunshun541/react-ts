@@ -2,7 +2,6 @@ import { useCallback, useState } from 'react';
 import Button from '../../components/button'
 function Demo1() {
   const [num, setnum] = useState(0)
-  console.log('demo1刷新了');
   const addNum2 = useCallback(()=> {
     setnum(pr => pr+1)
   },[])

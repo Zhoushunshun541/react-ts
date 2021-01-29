@@ -15,8 +15,6 @@ const http = axios.create({
 // 返回的时候拦截一下
 http.interceptors.response.use(
   res => {
-    console.log(res);
-    
     // 正常返回
     // 220  也属于成功请求  但是数据为空  所以单独拉出来判断下
     if (JSON.parse(res.request.response).status === 220) {

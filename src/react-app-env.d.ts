@@ -1,12 +1,20 @@
 /// <reference types="node" />
 /// <reference types="react" />
 /// <reference types="react-dom" />
+// 接口返回的接口
+
+interface Store {
+  state?: any;
+  dispatch?:any
+}
+
 interface Api {
   status?: number
   code?: number
   data?: any
   msg?: string
 }
+// antd表单验证的接口
 declare module '@loadable/component'
 declare module 'react-router-dom'
 declare module 'qs'
