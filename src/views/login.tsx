@@ -18,14 +18,15 @@ function Login(props){
   }
   const toLogin = (e) => {
     e.preventDefault()
-    console.log(store);
-    
     let p = {
       ...user
     }
     sysLogin(p).then((res: Api) => {
       if (res.status) {
-        store.dispatch('login')
+        store.dispatch({type:'login',payload:{
+          ...res.data
+        }})
+        localStorage.setItem('aa',"14")
         props.history.push('/home')
       }else{
         message.error(res.msg)

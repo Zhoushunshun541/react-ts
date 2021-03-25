@@ -2,6 +2,12 @@
   "name": "react-ts",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "lint": "react-app-rewired lint"
+  },
   "dependencies": {
     "@babel/core": "7.12.3",
     "@loadable/component": "^5.14.1",
@@ -19,7 +25,6 @@
     "@typescript-eslint/parser": "^4.5.0",
     "antd": "^4.9.4",
     "axios": "^0.21.1",
-    "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.0",
     "babel-loader": "8.1.0",
     "babel-plugin-import": "^1.13.3",
@@ -32,13 +37,11 @@
     "customize-cra": "^1.0.0",
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
-    "eslint": "^7.11.0",
     "eslint-config-react-app": "^6.0.0",
     "eslint-plugin-flowtype": "^5.2.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jest": "^24.1.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-testing-library": "^3.9.2",
     "eslint-webpack-plugin": "^2.1.0",
@@ -76,6 +79,8 @@
     "sass-loader": "8.0.2",
     "semver": "7.3.2",
     "slip_check": "^1.1.5",
+    "socket.io": "^3.1.0",
+    "socket.io-client": "^3.1.0",
     "style-loader": "1.3.0",
     "terser-webpack-plugin": "4.2.3",
     "ts-pnp": "1.2.0",
@@ -87,11 +92,6 @@
     "webpack-dev-server": "3.11.0",
     "webpack-manifest-plugin": "2.2.0",
     "workbox-webpack-plugin": "5.1.4"
-  },
-  "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
-    "test": "react-app-rewired test"
   },
   "eslintConfig": {
     "extends": [

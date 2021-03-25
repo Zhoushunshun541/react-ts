@@ -1,0 +1,40 @@
+.chat-room_page{
+  min-width: 1200px;
+  min-height:600px;
+  width: 100%;
+  height: 100%;
+  .chat-room_left{
+    border-right: 1px solid #ccc;
+    float: left;
+    width: 70%;
+    height: 100%;
+    .chat-content{
+      height: 60%;
+    }
+    .chat-editor{
+      height: 40%;
+      .w-e-text-container{
+        height: calc(100% - 40px) !important;
+      }
+    }
+  }
+  .chat-room_right{
+    float: right;
+    width: 30%;
+    height: 100%;
+    padding: 25px 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    .person-info{
+      align-items: flex-start;
+      .right{
+        margin-left: 20px;
+      }
+    }
+    p{
+      color: #333;
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+}
